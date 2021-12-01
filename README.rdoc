@@ -31,7 +31,7 @@ https://github.com/Lewisjp/petmetrics/blob/master/app/assets/images/static/State
 <b>Prototype Admin Workflow Diagram</b>
 https://github.com/Lewisjp/petmetrics/blob/master/app/assets/images/static/Prototype.png 
 
-Most recent CSV export of database information can be found at (https://github.com/Lewisjp/petmetrics/blob/master/public/outgoing/allrecords.csv)
+Most recent CSV export of database information can be found at https://github.com/Lewisjp/petmetrics/blob/master/public/outgoing/allrecords.csv
 * To generate an updated CSV, run the rails app and from the header click the "About this Prototype" link
 
 <b>Integration with Intel® oneAPI</b>
