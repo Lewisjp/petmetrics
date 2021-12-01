@@ -1,6 +1,6 @@
 == PetMetrics Prototype
 
-<tt>\Introduction\</tt>
+*Introduction*
 
 The general design of “Pet-Metrics” is as a data repository application for cataloguing a pet’s general details, medical history, treatment plans and biometrics. This allows a pet’s medical information to be accessible to their owner, veterinarian, or others with a need to know at all times so that no service, whether life-threatening or trivial, will be delayed due to lack of documentation.
 
