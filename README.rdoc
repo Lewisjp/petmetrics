@@ -1,12 +1,15 @@
 == PetMetrics Prototype
 
-<tt>\*Introduction\*</tt>
+<tt>\Introduction\</tt>
+
 The general design of “Pet-Metrics” is as a data repository application for cataloguing a pet’s general details, medical history, treatment plans and biometrics. This allows a pet’s medical information to be accessible to their owner, veterinarian, or others with a need to know at all times so that no service, whether life-threatening or trivial, will be delayed due to lack of documentation.
 
-<tt>\*Disease and treatment analysed in the prototype\*</tt>
+<tt>\Disease and treatment analysed in the prototype\</tt>
+
 The prototype will focus on nucleoside analog GS-441524 as a treatment for a cat with the disease Feline Infectious Peritonitis (FIP). Success of the project would demonstrate the use of data analysis to assist veterinarians in diagnosing and treating illnesses. The data analysis results would be displayed within the Pet-Metrics App.
 
-<tt>\*Intel® oneAPI\*</tt>
+<tt>\Intel® oneAPI\</tt>
+
 The immediate goal is to use the Intel® oneAPI Data Analytics Library to analyse a data set and display the impact of the treatment to a pet’s condition, like temperature within the first 5 days, white blood cell count over 12 weeks, absolute blood lymphocyte count over 12 weeks, and packed cell volume (PCV) over 12 weeks.
 
 1. White blood cells fight infection and other conditions.
@@ -16,26 +19,27 @@ The immediate goal is to use the Intel® oneAPI Data Analytics Library to analys
 3. Packed Cell Volume (PCV), indicates the proportion of blood that is made up of cells. Unhealthy low PCV levels can indicate dehydration or other ailments.
 
 
-<tt>\*Reason for displaying health trend while on suggested treatment\*</tt>
+<tt>\Reason for displaying health trend while on suggested treatment\</tt>
+
 Pets can be suffering from additional conditions, such as age or chronic illness, that make the recommended treatment improper. For example, if a pet has an impaired immune system, the veterinarian should know if the suggested treatment will weaken it further.
 
 
-<tt>\*Prototype State Chart Diagram\*</tt>
+<tt>\Prototype State Chart Diagram\</tt>
 https://github.com/Lewisjp/petmetrics/blob/master/app/assets/images/static/StateChartDiagram.png 
 
 
-<tt>\*Prototype Admin Workflow Diagram\*</tt>
+<tt>\Prototype Admin Workflow Diagram\</tt>
 https://github.com/Lewisjp/petmetrics/blob/master/app/assets/images/static/Prototype.png 
 
 Most recent CSV export of database information can be found at (https://github.com/Lewisjp/petmetrics/blob/master/public/outgoing/allrecords.csv)
 * To generate an updated CSV, run the rails app and from the header click the "About this Prototype" link
 
-<tt>\*Integration with Intel® oneAPI\*</tt>
+<tt>\Integration with Intel® oneAPI\</tt>
 Currently it is a manual process.  
 Basic script can be seen at https://github.com/Lewisjp/petmetrics/blob/master/lib/scripts/syncOneAPIandAPP.rb
 * DevCloud Analytics scripts can be seen on the https://github.com/Lewisjp/petmetricsanalytics
 
-<tt>\*Next Steps\*</tt>
+<tt>\Next Steps\</tt>
 * Automate transfer of files from PetMetrics Prototype app to Dev Cloud
 * Improve UI
 * Add input validation 
