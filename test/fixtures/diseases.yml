@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cat_id: 1
+  veterinarian: MyString
+  dateofdiagnosis: 2021-11-27
+  condition: MyText
+  conditionform: MyText
+  conditionrelapse: false
+  remission: false
+  remissiondate: 2021-11-27
+
+two:
+  cat_id: 1
+  veterinarian: MyString
+  dateofdiagnosis: 2021-11-27
+  condition: MyText
+  conditionform: MyText
+  conditionrelapse: false
+  remission: false
+  remissiondate: 2021-11-27

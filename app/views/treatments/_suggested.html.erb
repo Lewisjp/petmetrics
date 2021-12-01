@@ -1,0 +1,38 @@
+<h3>Suggested Treatment</h3>
+
+  <p><strong>Medicine:</strong> GS-441524</p>
+  <p><strong>Dose:</strong> 2.0 to 4.0 mg/kg q24h</p>
+  <p><strong>Weeks:</strong> While condition is active or longer as determiend by veterinarian</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= if FileTest.exist?("#{Rails.root}/app/assets/images/GS-441524/GS-441524DailyTempAverage.png")
+        image_tag "GS-441524/GS-441524DailyTempAverage.png", size: "400"
+      else 
+        image_tag "GS-441524/FIPDailyTempAverage.png", size: "400"
+      end %>
+    </div>
+    <div class="col">
+      <%= if FileTest.exist?("#{Rails.root}/app/assets/images/GS-441524/GS-441524PCVAverage.png")
+        image_tag "GS-441524/GS-441524PCVAverage.png", size: "400"
+      else 
+        image_tag "GS-441524/FIPPCVAverage.png", size: "400"
+      end %>
+    </div>
+    <div class="col">
+      <%= if FileTest.exist?("#{Rails.root}/app/assets/images/GS-441524/GS-441524WeeklyLymphocytesAverage.png")
+        image_tag "GS-441524/GS-441524WeeklyLymphocytesAverage.png", size: "400"
+      else 
+        image_tag "GS-441524/FIPWeeklyLymphocytesAverage.png", size: "400"
+      end %>
+    </div>
+    <div class="col">
+      <%= if FileTest.exist?("#{Rails.root}/app/assets/images/GS-441524/GS-441524WeeklyWhiteBloodCellsAverage.png")
+        image_tag "GS-441524/GS-441524WeeklyWhiteBloodCellsAverage.png", size: "400"
+      else 
+        image_tag "GS-441524/FIPWeeklyWhiteBloodCellsAverage.png", size: "400"
+      end %>
+    </div>
+  </div>
+</div>

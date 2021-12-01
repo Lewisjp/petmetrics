@@ -1,0 +1,90 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Condition</h3>
+
+<%= link_to 'Edit this record', edit_disease_path(@disease) %> | 
+<a href='/cats/<%= @disease.cat_id %>'>See this Cat's details</a> | <%= link_to 'View all Pets\' condition records', diseases_path %> 
+
+<!-- <p>
+  <strong>Cat:</strong>
+  <%= @disease.cat_id %>
+</p> -->
+<br><br>
+<p>
+  <strong>Veterinarian:</strong>
+  <%= @disease.veterinarian %>
+</p>
+
+<p>
+  <strong>Date of Diagnosis:</strong>
+  <%= @disease.dateofdiagnosis %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @disease.condition %>
+</p>
+
+<p>
+  <strong>Condition form:</strong>
+  <%= @disease.conditionform %>
+</p>
+
+<p>
+  <strong>Condition relapsed:</strong>
+  <%= @disease.conditionrelapse %>
+</p>
+
+<p>
+  <strong>Remission:</strong>
+  <%= @disease.remission %>
+</p>
+
+<!-- <p>
+  <strong>Remission date:</strong>
+  <%= @disease.remissiondate %>
+</p> -->
+
+<% if @disease.condition == 'Feline infectious peritonitis'%>
+  <div id='suggestedtreatment'>
+    <br>
+    <%= render partial: 'treatments/suggested', locals: { treatment: @treatment } %>
+    <br><br>
+  </div>
+<% end %>
+
+
+
+
+<h3>Treatment Plans</h3>
+<% @treatments.each do |treatment| %>
+  <div>
+    <br>
+<!--     <p><strong>Start date: </strong><%= treatment.startdate %></p>
+    <p><strong>End date: </strong><%= treatment.enddate %></p> -->
+    <p><strong>Total weeks: </strong><%= treatment.totalweeks %></p>
+    <p><strong>Medicine: </strong><%= treatment.medicine %></p>
+    <p><strong>Dose: </strong><%= treatment.dose %></p>
+    <p><strong>Device: </strong><%= treatment.device %></p>
+    <p><strong>Surgery: </strong><%= treatment.surgery %></p>
+    <p><strong>Treatment completed: </strong><%= treatment.treatmentcomplete %></p>
+    <p><%= link_to 'Delete', treatment_path(treatment), method: :delete, data: { confirm: 'Are you sure?' } %> | <a href='/treatments/<%= treatment.id %>/edit'>Edit</a> | 
+    <a href='/treatments/<%= treatment.id %>'>Review biometrics while on plan</a>
+    </p>
+  </div>
+<% end %><br>
+
+<button>Add Treatment</button><br><br>
+<div id='treatmentform'>
+  <%= render partial: 'treatments/form', locals: { treatment: @treatment } %>
+</div>
+
+<!-- To Do: Move this code out -->
+<script>$('#treatmentform').hide();</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#treatmentform").toggle();
+  });
+});
+</script>

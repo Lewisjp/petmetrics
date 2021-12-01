@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit cat details', edit_cat_path(@cat) %> |
+<%= link_to 'Back', cats_path %>
+<br><br>
+
+<!-- <p>
+  <strong>User:</strong>
+  <%= @cat.user_id %>
+</p> -->
+
+<p>
+  <strong>Name:</strong>
+  <%= @cat.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cat.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@cat.picture_url, width: 600) if @cat.picture.present? %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @cat.dateofbirth %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @cat.breed %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @cat.sex %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @cat.origin %>
+</p>
+
+<p>
+  <strong>Dead:</strong>
+  <%= @cat.dead %>
+</p>
+
+<p>
+  <strong>Cause of death:</strong>
+  <%= @cat.causeofdeath %>
+</p>
+
+
+<h3>Medical History</h3>
+<% @diseases.each do |disease| %>
+  <div>
+    <strong><%= disease.dateofdiagnosis %></strong>
+    <br>
+    <p><strong>Condition:</strong> <%= disease.condition %></p>
+    <p><strong>Condition form:</strong> <%= disease.conditionform %></p>
+    <p><strong>Relapsed:</strong> <%= disease.conditionrelapse %></p>
+    <p><strong>In remission:</strong><%= disease.remission %></p>
+    <p><strong>Who made diagnosis:</strong><%= disease.veterinarian %></p>
+    <p><%= link_to 'Delete', disease_path(disease), method: :delete, data: { confirm: 'Are you sure?' } %> | <a href='/diseases/<%= disease.id %>/edit'>Edit</a> | <a href='/diseases/<%= disease.id %>'>Review treatment plan</a> </p>
+  </div>
+<% end %>
+<br>
+
+<button>Add Diagnosis</button><br><br>
+<div id='diseaseform'>
+  <%= render partial: 'diseases/form', locals: { disease: @disease } %>
+</div>
+
+<!-- To Do: Move this code out -->
+<script>$('#diseaseform').hide();</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#diseaseform").toggle();
+  });
+});
+</script>

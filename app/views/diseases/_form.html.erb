@@ -1,0 +1,46 @@
+<%= form_for(@disease) do |f| %>
+  <% if @disease.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disease.errors.count, "error") %> prohibited this disease from being saved:</h2>
+
+      <ul>
+      <% @disease.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :cat_id %>
+  <div class="field">
+    <%= f.label :veterinarian %><br>
+    <%= f.text_field :veterinarian %>
+  </div>
+  <div class="field">
+    <%= f.label :dateofdiagnosis, "Date of diagnosis" %><br>
+    <%= f.date_select :dateofdiagnosis %>
+  </div>
+  <div class="field">
+    <%= f.label :condition %><br>
+    <%= f.text_area :condition %>
+  </div>
+  <div class="field">
+    <%= f.label :conditionform, "Condition form" %><br>
+    <%= f.text_area :conditionform %>
+  </div>
+  <div class="field">
+    <%= f.label :conditionrelapse, "Condition relapsed" %><br>
+    <%= f.check_box :conditionrelapse %>
+  </div>
+  <div class="field">
+    <%= f.label :remission %><br>
+    <%= f.check_box :remission %>
+  </div>
+<!--   <div class="field" id="remissiondate">
+    <%= f.label :remissiondate %><br>
+    <%= f.date_select :remissiondate %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

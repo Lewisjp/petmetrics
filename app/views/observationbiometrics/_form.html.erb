@@ -1,0 +1,195 @@
+<%= form_for(@observationbiometric) do |f| %>
+  <% if @observationbiometric.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@observationbiometric.errors.count, "error") %> prohibited this observationbiometric from being saved:</h2>
+
+      <ul>
+      <% @observationbiometric.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= f.hidden_field :treatment_id %>
+  <div class="field">
+    <%= f.label :Day0TempF, "Before treatment Temp in F" %><br>
+    <%= f.number_field :Day0TempF %>
+  </div>
+  <div class="field">
+    <%= f.label :Day1TempF, "Day 1 Temp in F" %><br>
+    <%= f.number_field :Day1TempF %>
+  </div>
+  <div class="field">
+    <%= f.label :Day2TempF, "Day 2 Temp in F" %><br>
+    <%= f.number_field :Day2TempF %>
+  </div>
+  <div class="field">
+    <%= f.label :Day3TempF, "Day 3 Temp in F" %><br>
+    <%= f.number_field :Day3TempF %>
+  </div>
+  <div class="field">
+    <%= f.label :Day4TempF, "Day 4 Temp in F" %><br>
+    <%= f.number_field :Day4TempF %>
+  </div>
+  <div class="field">
+    <%= f.label :Day5TempF, "Day 5 Temp in F" %><br>
+    <%= f.number_field :Day5TempF %>
+  </div>
+  <div class="field">
+    <%= f.label :Week0WhiteBlood, "White blood cell count before treatment" %><br>
+    <%= f.number_field :Week0WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week1WhiteBlood, "White blood cell count week 1" %><br>
+    <%= f.number_field :Week1WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week2WhiteBlood, "White blood cell count week 2" %><br>
+    <%= f.number_field :Week2WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week3WhiteBlood, "White blood cell count week 3" %><br>
+    <%= f.number_field :Week3WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week4WhiteBlood, "White blood cell count week 4" %><br>
+    <%= f.number_field :Week4WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week5WhiteBlood, "White blood cell count week 5" %><br>
+    <%= f.number_field :Week5WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week6WhiteBlood, "White blood cell count week 6" %><br>
+    <%= f.number_field :Week6WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week7WhiteBlood, "White blood cell count week 7" %><br>
+    <%= f.number_field :Week7WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week8WhiteBlood, "White blood cell count week 8" %><br>
+    <%= f.number_field :Week8WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week9WhiteBlood, "White blood cell count week 9" %><br>
+    <%= f.number_field :Week9WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week10WhiteBlood, "White blood cell count week 10" %><br>
+    <%= f.number_field :Week10WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week11WhiteBlood, "White blood cell count week 11" %><br>
+    <%= f.number_field :Week11WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week12WhiteBlood, "White blood cell count week 12" %><br>
+    <%= f.number_field :Week12WhiteBlood %>
+  </div>
+  <div class="field">
+    <%= f.label :Week0lymphocytes, "Absolute blood lymphocyte count before treatment" %><br>
+    <%= f.number_field :Week0lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week1lymphocytes, "Absolute blood lymphocyte count week 1" %><br>
+    <%= f.number_field :Week1lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week2lymphocytes, "Absolute blood lymphocyte count week 2" %><br>
+    <%= f.number_field :Week2lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week3lymphocytes, "Absolute blood lymphocyte count week 3" %><br>
+    <%= f.number_field :Week3lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week4lymphocytes, "Absolute blood lymphocyte count week 4" %><br>
+    <%= f.number_field :Week4lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week5lymphocytes, "Absolute blood lymphocyte count week 5" %><br>
+    <%= f.number_field :Week5lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week6lymphocytes, "Absolute blood lymphocyte count week 6" %><br>
+    <%= f.number_field :Week6lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week7lymphocytes, "Absolute blood lymphocyte count week 7" %><br>
+    <%= f.number_field :Week7lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week8lymphocytes, "Absolute blood lymphocyte count week 8" %><br>
+    <%= f.number_field :Week8lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week9lymphocytes, "Absolute blood lymphocyte count week 9" %><br>
+    <%= f.number_field :Week9lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week10lymphocytes, "Absolute blood lymphocyte count week 10" %><br>
+    <%= f.number_field :Week10lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week11lymphocytes, "Absolute blood lymphocyte count week 11" %><br>
+    <%= f.number_field :Week11lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week12lymphocytes, "Absolute blood lymphocyte count week 12" %><br>
+    <%= f.number_field :Week12lymphocytes %>
+  </div>
+  <div class="field">
+    <%= f.label :Week1PCV, "Packed Cell volume (PCV) week 1" %><br>
+    <%= f.number_field :Week1PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week2PCV, "Packed Cell volume (PCV) week 2" %><br>
+    <%= f.number_field :Week2PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week3PCV, "Packed Cell volume (PCV) week 3" %><br>
+    <%= f.number_field :Week3PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week4PCV, "Packed Cell volume (PCV) week 4" %><br>
+    <%= f.number_field :Week4PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week5PCV, "Packed Cell volume (PCV) week 5" %><br>
+    <%= f.number_field :Week5PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week6PCV, "Packed Cell volume (PCV) week 6" %><br>
+    <%= f.number_field :Week6PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week7PCV, "Packed Cell volume (PCV) week 7" %><br>
+    <%= f.number_field :Week7PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week8PCV, "Packed Cell volume (PCV) week 8" %><br>
+    <%= f.number_field :Week8PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week9PCV, "Packed Cell volume (PCV) week 9" %><br>
+    <%= f.number_field :Week9PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week10PCV, "Packed Cell volume (PCV) week 10" %><br>
+    <%= f.number_field :Week10PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week11PCV, "Packed Cell volume (PCV) week 11" %><br>
+    <%= f.number_field :Week11PCV %>
+  </div>
+  <div class="field">
+    <%= f.label :Week12PCV, "Packed Cell volume (PCV) week 12" %><br>
+    <%= f.number_field :Week12PCV %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

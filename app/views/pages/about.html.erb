@@ -1,0 +1,40 @@
+<h1>PetMetrics Prototype</h1>
+
+<br><strong>Introduction</strong><br>
+
+<p>The general design of “Pet-Metrics” is as a data repository application for cataloguing a pet’s general details, medical history, treatment plans and biometrics. This allows a pet’s medical information to be accessible to their owner, veterinarian, or others with a need to know at all times so that no service, whether life-threatening or trivial, will be delayed due to lack of documentation.
+
+<br><br><strong>Disease and treatment analysed in the prototype</strong><br>
+
+<p>The prototype will focus on nucleoside analog GS-441524 as a treatment for a cat with the disease Feline Infectious Peritonitis (FIP).  Success of the project would demonstrate the use of data analysis to assist veterinarians in diagnosing and treating illnesses.  The data analysis results would be displayed within the Pet-Metrics App. 
+
+<br><br><strong>Intel® oneAPI</strong><br>
+
+<p>The immediate goal is to use the Intel® oneAPI Data Analytics Library to analyse a data set and display the impact of the treatment to a pet’s condition, like temperature within the first 5 days, white blood cell count over 12 weeks, absolute blood lymphocyte count over 12 weeks, and packed cell volume (PCV) over 12 weeks. </p>
+<p>1. White blood cells fight infection and other conditions.</p>
+<p>2. Lymphocytes support the immune system with T cells, and B cells.</p>
+<p>3. Packed Cell Volume (PCV),  indicates the proportion of blood that is made up of cells.  Unhealthy low PCV levels can indicate dehydration or other ailments. </p>
+<br><strong>Reason for displaying health trend while on suggested treatment</strong><br>
+
+<p>Pets can be suffering from additional conditions, such as age or chronic illness, that make the recommended treatment improper.  For example, if a pet has an impaired immune system, the veterinarian should know if the suggested treatment will weaken it further.</p>
+
+
+<div class="container">
+  <div class="row">
+    <br><strong>Prototype State Chart Diagram</strong><br>
+    <div class="col">
+      <%= image_tag "static/StateChartDiagram.png", size: "900" %>
+    </div>
+  </div>
+    <div class="row">
+    <br><strong>Prototype Admin Workflow Diagram</strong><br>
+    <div class="col">
+      <%= image_tag "static/Prototype.png", height: "auto" %>
+    </div>
+  </div>
+</div>
+
+<!-- Created new CSV step -->
+<br><strong>Data CSV for analysis</strong><br>
+<p>Most recent CSV output of Database data for analysis was <%= @createcsvstatus %></p>
+

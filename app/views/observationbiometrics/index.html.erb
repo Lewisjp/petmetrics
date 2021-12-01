@@ -1,0 +1,115 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Observationbiometrics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Treatment</th>
+      <th>Day0tempf</th>
+      <th>Day1tempf</th>
+      <th>Day2tempf</th>
+      <th>Day3tempf</th>
+      <th>Day4tempf</th>
+      <th>Day5tempf</th>
+      <th>Week0whiteblood</th>
+      <th>Week1whiteblood</th>
+      <th>Week2whiteblood</th>
+      <th>Week3whiteblood</th>
+      <th>Week4whiteblood</th>
+      <th>Week5whiteblood</th>
+      <th>Week6whiteblood</th>
+      <th>Week7whiteblood</th>
+      <th>Week8whiteblood</th>
+      <th>Week9whiteblood</th>
+      <th>Week10whiteblood</th>
+      <th>Week11whiteblood</th>
+      <th>Week12whiteblood</th>
+      <th>Week0lymphocytes</th>
+      <th>Week1lymphocytes</th>
+      <th>Week2lymphocytes</th>
+      <th>Week3lymphocytes</th>
+      <th>Week4lymphocytes</th>
+      <th>Week5lymphocytes</th>
+      <th>Week6lymphocytes</th>
+      <th>Week7lymphocytes</th>
+      <th>Week8lymphocytes</th>
+      <th>Week9lymphocytes</th>
+      <th>Week10lymphocytes</th>
+      <th>Week11lymphocytes</th>
+      <th>Week12lymphocytes</th>
+      <th>Week1pcv</th>
+      <th>Week2pcv</th>
+      <th>Week3pcv</th>
+      <th>Week4pcv</th>
+      <th>Week5pcv</th>
+      <th>Week6pcv</th>
+      <th>Week7pcv</th>
+      <th>Week8pcv</th>
+      <th>Week9pcv</th>
+      <th>Week10pcv</th>
+      <th>Week11pcv</th>
+      <th>Week12pcv</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @observationbiometrics.each do |observationbiometric| %>
+      <tr>
+        <td><%= observationbiometric.treatment_id %></td>
+        <td><%= observationbiometric.Day0TempF %></td>
+        <td><%= observationbiometric.Day1TempF %></td>
+        <td><%= observationbiometric.Day2TempF %></td>
+        <td><%= observationbiometric.Day3TempF %></td>
+        <td><%= observationbiometric.Day4TempF %></td>
+        <td><%= observationbiometric.Day5TempF %></td>
+        <td><%= observationbiometric.Week0WhiteBlood %></td>
+        <td><%= observationbiometric.Week1WhiteBlood %></td>
+        <td><%= observationbiometric.Week2WhiteBlood %></td>
+        <td><%= observationbiometric.Week3WhiteBlood %></td>
+        <td><%= observationbiometric.Week4WhiteBlood %></td>
+        <td><%= observationbiometric.Week5WhiteBlood %></td>
+        <td><%= observationbiometric.Week6WhiteBlood %></td>
+        <td><%= observationbiometric.Week7WhiteBlood %></td>
+        <td><%= observationbiometric.Week8WhiteBlood %></td>
+        <td><%= observationbiometric.Week9WhiteBlood %></td>
+        <td><%= observationbiometric.Week10WhiteBlood %></td>
+        <td><%= observationbiometric.Week11WhiteBlood %></td>
+        <td><%= observationbiometric.Week12WhiteBlood %></td>
+        <td><%= observationbiometric.Week0lymphocytes %></td>
+        <td><%= observationbiometric.Week1lymphocytes %></td>
+        <td><%= observationbiometric.Week2lymphocytes %></td>
+        <td><%= observationbiometric.Week3lymphocytes %></td>
+        <td><%= observationbiometric.Week4lymphocytes %></td>
+        <td><%= observationbiometric.Week5lymphocytes %></td>
+        <td><%= observationbiometric.Week6lymphocytes %></td>
+        <td><%= observationbiometric.Week7lymphocytes %></td>
+        <td><%= observationbiometric.Week8lymphocytes %></td>
+        <td><%= observationbiometric.Week9lymphocytes %></td>
+        <td><%= observationbiometric.Week10lymphocytes %></td>
+        <td><%= observationbiometric.Week11lymphocytes %></td>
+        <td><%= observationbiometric.Week12lymphocytes %></td>
+        <td><%= observationbiometric.Week1PCV %></td>
+        <td><%= observationbiometric.Week2PCV %></td>
+        <td><%= observationbiometric.Week3PCV %></td>
+        <td><%= observationbiometric.Week4PCV %></td>
+        <td><%= observationbiometric.Week5PCV %></td>
+        <td><%= observationbiometric.Week6PCV %></td>
+        <td><%= observationbiometric.Week7PCV %></td>
+        <td><%= observationbiometric.Week8PCV %></td>
+        <td><%= observationbiometric.Week9PCV %></td>
+        <td><%= observationbiometric.Week10PCV %></td>
+        <td><%= observationbiometric.Week11PCV %></td>
+        <td><%= observationbiometric.Week12PCV %></td>
+        <td><%= link_to 'Show', observationbiometric %></td>
+        <td><%= link_to 'Edit', edit_observationbiometric_path(observationbiometric) %></td>
+        <td><%= link_to 'Destroy', observationbiometric, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Observationbiometric', new_observationbiometric_path %>

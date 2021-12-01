@@ -1,0 +1,134 @@
+<p id="notice"><%= notice %></p>
+<h3>Treatment Plan</h3>
+
+<!-- <p>
+  <strong>Disease:</strong>
+  <%= @treatment.disease_id %>
+</p> -->
+
+<!-- <p>
+  <strong>Start date:</strong>
+  <%= @treatment.startdate %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @treatment.enddate %>
+</p> -->
+
+<p>
+  <strong>Total weeks:</strong>
+  <%= @treatment.totalweeks %>
+</p>
+
+<p>
+  <strong>Medicine:</strong>
+  <%= @treatment.medicine %>
+</p>
+
+<p>
+  <strong>Dose:</strong>
+  <%= @treatment.dose %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @treatment.device %>
+</p>
+
+<p>
+  <strong>Surgery:</strong>
+  <%= @treatment.surgery %>
+</p>
+
+<p>
+  <strong>Treatment completed:</strong>
+  <%= @treatment.treatmentcomplete %>
+</p>
+
+<p><%= link_to 'Edit', edit_treatment_path(@treatment) %> | 
+<a href='/cats/<%= @treatment.disease_id %>'>View Cat being treated</a> |  
+<%= link_to 'View all Pets\' Treatment Plans', treatments_path %>  
+</p>
+
+
+<h3>Observation Biometrics</h3>
+<% @observationbiometrics.each do |observationbiometric| %>
+  <div>
+    <strong>Daily Temp F</strong>
+    <br>
+    <p><strong>Before treatment </strong><%= observationbiometric.Day0TempF %></p>
+    <p><strong>Day 1 </strong><%= observationbiometric.Day1TempF %></p>
+    <p><strong>Day 2 </strong><%= observationbiometric.Day2TempF %></p>
+    <p><strong>Day 3 </strong><%= observationbiometric.Day3TempF %></p>
+    <p><strong>Day 4 </strong><%= observationbiometric.Day4TempF %></p>
+    <p><strong>Day 5 </strong><%= observationbiometric.Day5TempF %></p>
+    <br>
+    <strong>Weekly White Blood Metrics</strong>
+    <br>
+    <p><strong>Before treatment </strong><%= observationbiometric.Week0WhiteBlood %></p>
+    <p><strong>Week 1 </strong><%= observationbiometric.Week1WhiteBlood %></p>
+    <p><strong>Week 2 </strong><%= observationbiometric.Week2WhiteBlood %></p>
+    <p><strong>Week 3 </strong><%= observationbiometric.Week3WhiteBlood %></p>
+    <p><strong>Week 4 </strong><%= observationbiometric.Week4WhiteBlood %></p>
+    <p><strong>Week 5 </strong><%= observationbiometric.Week5WhiteBlood %></p>
+    <p><strong>Week 6 </strong><%= observationbiometric.Week6WhiteBlood %></p>
+    <p><strong>Week 7 </strong><%= observationbiometric.Week7WhiteBlood %></p>
+    <p><strong>Week 8 </strong><%= observationbiometric.Week8WhiteBlood %></p>
+    <p><strong>Week 9 </strong><%= observationbiometric.Week9WhiteBlood %></p>
+    <p><strong>Week 10 </strong><%= observationbiometric.Week10WhiteBlood %></p>
+    <p><strong>Week 11 </strong><%= observationbiometric.Week11WhiteBlood %></p>
+    <p><strong>Week 12 </strong><%= observationbiometric.Week12WhiteBlood %></p>
+    <br>
+    <strong>Weekly Lymphocytes Metrics</strong>
+    <br>
+    <p><strong>Before treatment </strong><%= observationbiometric.Week0lymphocytes %></p>
+    <p><strong>Week 1 </strong><%= observationbiometric.Week1lymphocytes %></p>
+    <p><strong>Week 2 </strong><%= observationbiometric.Week2lymphocytes %></p>
+    <p><strong>Week 3 </strong><%= observationbiometric.Week3lymphocytes %></p>
+    <p><strong>Week 4 </strong><%= observationbiometric.Week4lymphocytes %></p>
+    <p><strong>Week 5 </strong><%= observationbiometric.Week5lymphocytes %></p>
+    <p><strong>Week 6 </strong><%= observationbiometric.Week6lymphocytes %></p>
+    <p><strong>Week 7 </strong><%= observationbiometric.Week7lymphocytes %></p>
+    <p><strong>Week 8 </strong><%= observationbiometric.Week8lymphocytes %></p>
+    <p><strong>Week 9 </strong><%= observationbiometric.Week9lymphocytes %></p>
+    <p><strong>Week 10 </strong><%= observationbiometric.Week10lymphocytes %></p>    
+    <p><strong>Week 11 </strong><%= observationbiometric.Week11lymphocytes %></p>
+    <p><strong>Week 12 </strong><%= observationbiometric.Week12lymphocytes %></p>
+    <br>
+    <strong>Weekly PCV Metrics</strong>
+    <br>
+    <p><strong>Week 1 </strong><%= observationbiometric.Week1PCV %></p>
+    <p><strong>Week 2 </strong><%= observationbiometric.Week2PCV %></p>
+    <p><strong>Week 3 </strong><%= observationbiometric.Week3PCV %></p>
+    <p><strong>Week 4 </strong><%= observationbiometric.Week4PCV %></p>
+    <p><strong>Week 5 </strong><%= observationbiometric.Week5PCV %></p>
+    <p><strong>Week 6 </strong><%= observationbiometric.Week6PCV %></p>
+    <p><strong>Week 7 </strong><%= observationbiometric.Week7PCV %></p>
+    <p><strong>Week 8 </strong><%= observationbiometric.Week8PCV %></p>
+    <p><strong>Week 9 </strong><%= observationbiometric.Week9PCV %></p>
+    <p><strong>Week 10 </strong><%= observationbiometric.Week10PCV %></p>
+    <p><strong>Week 11 </strong><%= observationbiometric.Week11PCV %></p>
+    <p><strong>Week 12 </strong><%= observationbiometric.Week12PCV %></p>
+    <br>
+    <p><%= link_to 'Delete', observationbiometric_path(observationbiometric), method: :delete, data: { confirm: 'Are you sure?' } %> | 
+    <a href='/observationbiometrics/<%= observationbiometric.id %>/edit'>Edit</a></p>
+  </div>
+<% end %>
+
+
+
+<button>Add Observation Biometrics</button><br><br>
+<div id='observationbiometricform'>
+  <%= render partial: 'observationbiometrics/form', locals: { observationbiometric: @observationbiometric } %>
+</div>
+
+<!-- To Do: Move this code out -->
+<script>$('#observationbiometricform').hide();</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#observationbiometricform").toggle();
+  });
+});
+</script>

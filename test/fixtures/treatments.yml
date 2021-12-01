@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  disease_id: 1
+  startdate: 2021-11-28
+  enddate: 2021-11-28
+  totalweeks: 1
+  medicine: MyText
+  dose: MyText
+  device: MyText
+  surgery: MyText
+  treatmentcomplete: false
+
+two:
+  disease_id: 1
+  startdate: 2021-11-28
+  enddate: 2021-11-28
+  totalweeks: 1
+  medicine: MyText
+  dose: MyText
+  device: MyText
+  surgery: MyText
+  treatmentcomplete: false
