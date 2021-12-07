@@ -10,7 +10,6 @@ class ObservationbiometricsController < ApplicationController
   # GET /observationbiometrics/1
   # GET /observationbiometrics/1.json
   def show
-    @observationbiometric = Observationbiometric.all
   end
 
   # GET /observationbiometrics/new
