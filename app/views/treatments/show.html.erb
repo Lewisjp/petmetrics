@@ -51,10 +51,10 @@
 <%= link_to 'View all Pets\' Treatment Plans', treatments_path %>  
 </p>
 
-
 <h3>Observation Biometrics</h3>
 <% @observationbiometrics.each do |observationbiometric| %>
   <div>
+
     <strong>Daily Temp F</strong>
     <br>
     <p><strong>Before treatment </strong><%= observationbiometric.Day0TempF %></p>

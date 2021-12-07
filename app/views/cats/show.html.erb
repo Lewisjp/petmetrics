@@ -4,19 +4,19 @@
 <%= link_to 'Back', cats_path %>
 <br><br>
 
-<!-- <p>
-  <strong>User:</strong>
-  <%= @cat.user_id %>
-</p> -->
-
 <p>
   <strong>Name:</strong>
   <%= @cat.name %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @cat.description %>
+  <% if (@cat.description != "") %>  
+    <p> 
+      <strong>Description:</strong>
+        <%= @cat.description %>
+    </p>
+  <% else %>
+  <% end %>
+
 </p>
 
 <p>

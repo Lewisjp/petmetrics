@@ -37,6 +37,12 @@ gem 'net-ssh', '~> 2.8.0'
 #   https://stackoverflow.com/questions/21488003/font-awesome-not-loading-icons-rails-4
 gem "font-awesome-rails"
 
+# Create UI Charts 
+# https://github.com/ankane/chartkick
+# https://stackoverflow.com/questions/19763144/undefined-method-group-by-day-rails-3-2
+gem 'chartkick', '~> 1.2.4'
+gem 'groupdate', '~> 2.3.0' 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
