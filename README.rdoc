@@ -43,3 +43,49 @@ Basic script can be seen at https://github.com/Lewisjp/petmetrics/blob/master/li
 * Automate transfer of files from PetMetrics Prototype app to Dev Cloud
 * Improve UI
 * Add input validation 
+
+
+<b>Local setup for MAC If your OS X / macOS version is 10.9 or higher:</b>
+
+Install Command line tools on terminal:
+* xcode-select --install
+
+Install Homebrew:
+* ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Install rbenv:
+* brew update
+* brew install rbenv
+* echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+* source ~/.bash_profile
+
+
+
+Build Ruby with rbenv:
+You can find the newest version of Ruby with the command “rbenv install -l”.
+* rbenv install 2.7.0
+
+If you got “OpenSSL::SSL::SSLError: … : certificate verify failed” error, try it this way.
+* brew install curl-ca-bundle
+* cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
+
+Set default Ruby:
+* rbenv global 2.7.0
+
+Install rails:
+* gem install rails --no-document
+
+Install yarn:
+* brew install yarn
+
+Check the environment
+Check that everything is working by running the application generator command.
+
+* rails -v
+Should output Rails 6.0.0 (or a higher version).
+
+Clone this Rails GitHub Repository.  In the App folder run the following:
+* rails server
+
+In a browser visit http://localhost:3000
+You will now see the PetMetrics app. 
